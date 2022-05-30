@@ -20,19 +20,57 @@ const { Queue, LinkedList, BinarySearchTree } = require('./DataStructures.js');
 
 // Ejercicio A.
 // Implementar los siguientes metodos para una linked list ya implementada.
+
 // Ejemplo: head -> 12 -> 15 -> 16 -> 10 -> 2 -> null
+
 // getHead() ---> Devuelve el primer nodo de la linkd list.
 // myLinkedList.getHead() ---> devuelve 12.
+
 // getTail() ---> Devuelve el ultimo nodo de la linked list.
 // myLinkedList.getTail() ---> devuelve 2.
+
 // search(value) ---> Devuelve la posicion del nodo con el valor recibido por parametro, contando desde 0.
 // myLinkedList.search(16) ---> devuelve 2.
 
-LinkedList.prototype.getHead = function () {};
+LinkedList.prototype.getHead = function () {
 
-LinkedList.prototype.getTail = function () {};
+    
+  
+    return this.head.value;
 
-LinkedList.prototype.search = function (value) {};
+};
+
+LinkedList.prototype.getTail = function () {
+
+   
+  
+ 
+    let pointer = this.head;         
+    while (pointer.next != null){
+      pointer = pointer.next;
+    }
+    return pointer.value;
+  
+  
+
+};
+
+LinkedList.prototype.search = function (argumento) {
+
+    let buscar = this.head; 
+    let pos = 0;
+  while (buscar !== null) { 
+      
+      if (buscar.value === argumento){
+        return pos;
+      }      
+      buscar = buscar.next;
+      pos++;
+    }
+  };
+  
+
+
 
 /*****************************************************************/
 /*************************** Recursion ***************************/

@@ -11,7 +11,7 @@ const {
 } = require('../Repaso.js');
 
 describe('Tests Repaso!!', function () {
-    xdescribe('Linked Lists', function () {
+    describe('Linked Lists', function () {
         describe('EJERCICIO A', function () {
             let linkedList;
             beforeEach(() => {
@@ -36,7 +36,7 @@ describe('Tests Repaso!!', function () {
         });
     });
 
-    xdescribe('Recursion', function () {
+    describe('Recursion', function () {
         describe('EJERCICIO B', function () {
             it('deberia devolver true si el numero es palidromo', () => {
                 expect(isPalindrome(555)).to.equal(true);
@@ -59,7 +59,7 @@ describe('Tests Repaso!!', function () {
         });
     });
 
-    xdescribe('Recursion y Stack', function () {
+    describe('Recursion y Stack', function () {
         describe('EJERCICIO C', function () {
             let queue;
 
@@ -89,7 +89,7 @@ describe('Tests Repaso!!', function () {
         });
     });
 
-    xdescribe('Closures', function () {
+    describe('Closures', function () {
         describe('EJERCICIO D', function () {
             it('growUp deberia devolver el String correspondiente', () => {
                 expect(growUp()).to.equal('Pepe riene ahora 29 años');
@@ -101,7 +101,7 @@ describe('Tests Repaso!!', function () {
         });
     });
 
-    xdescribe('Binary Search Tree', function () {
+    describe('Binary Search Tree', function () {
         describe('EJERCICIO E', () => {
             let bst;
             beforeEach(() => {
@@ -120,7 +120,7 @@ describe('Tests Repaso!!', function () {
             });
         });
     });
-    xdescribe('Queue', function () {
+    describe('Queue', function () {
         describe('EJERCICIO F', () => {
             let queue;
             beforeEach(() => {
@@ -146,7 +146,7 @@ describe('Tests Repaso!!', function () {
         });
     });
 
-    xdescribe('Sort', function () {
+    describe('Sort', function () {
         describe('EJERCICIO G', function () {
             const objetoPersonas = [
                 {
@@ -192,7 +192,7 @@ describe('Tests Repaso!!', function () {
         });
     });
 
-    xdescribe('Desafio', function () {
+    describe('Desafio', function () {
         describe('Ejercicio H', function () {
             it('deberia convertir de decimal a hexadecimal', () => {
                 let converted = decToHex(156555);
