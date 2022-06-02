@@ -83,7 +83,17 @@ LinkedList.prototype.search = function (argumento) {
 // Palindromo es una expresion que se lee igual de derecha a izquierda o viceversa.
 // Ejemplo de numeros palindromos: 1001, 252, 2001, 2222, 9889.
 
-function isPalindrome(number) {}
+function isPalindrome(number){
+    if (number < 0) return null;
+    if (number.toString().length<3) return null;
+    return isPalin(number.toString());
+}
+
+function isPalin(str){
+    if (str.length <=1) return true;
+    if (str[0] != str.slice(-1)) return false;
+    return isPalin(str.slice(1,-1))
+}
 
 /*****************************************************************/
 /*********************** Recursion y Stack ***********************/
